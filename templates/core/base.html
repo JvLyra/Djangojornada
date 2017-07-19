@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block titulo %}
+			Esse aqui é o titulo default
+		{% endblock titulo %}
+	</title>
+</head>
+<body>
+<h1>Sobre global</h1>
+<h2>seja bem-vindo, {{ nome }}  <br> Você esta matriculado em :  {{curso}} </h2>
+
+{% block content %}
+
+{% endblock content %}
+
+
+</body>
+</html>
