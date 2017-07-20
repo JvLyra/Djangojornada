@@ -8,6 +8,15 @@
 
 {% block content %}
 
+<form action="" method="post">
+	{% csrf_token %}
+	{{form.as_p}}
+
+	<button type="submit" >Enviar</button>
+
+</form>
+
+
 <img src="{% static "imagens/foto.jpg" %}">
 
 <h3>Voce passou nessas disciplinas:</h3>
