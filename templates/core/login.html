@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+	
+	{% if msg %}
+		<h3>{{msg}}</h3>
+	{% endif %}
+
+
+	<form action="" method="POST" >
+			{% csrf_token %}
+			{{form.as_p}}
+
+			<button type="submit">Entrar</button>
+	</form>
+
+{% endblock content %}

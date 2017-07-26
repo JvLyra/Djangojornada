@@ -15,13 +15,26 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from core.views import home 
+from core.views import HomeView 
 from core.views import about
+from core.views import LoginView
+from core.views import profile
+from core.views import logout
+from core.views import AlunoDetailView
+from core.views import AlunoListView
+
+
 
 
 urlpatterns = [
-    url(r'^jornadaciti$', home ),
+    url(r'^home$', HomeView.as_view() ),
     url(r'^admin/', admin.site.urls),
     url(r'^about$', about ),
+    url(r'^login$', LoginView.as_view() ),
+    url(r'^profile$', profile ),
+    url(r'^logout$', logout, name='logout' ),
+    url(r'^aluno/(?P<pk>\d+)$',AlunoDetailView.as_view(), name='aluno-detail'),
+    url(r'^alunos$', AlunoListView.as_view()),
+
 
 ]

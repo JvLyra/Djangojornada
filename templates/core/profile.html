@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+
+
+{% block content %}
+
+	<h3>Olá, {{ user.username }}</h3>
+	<h2>Nome: {{user.aluno.nome}} </h2>
+	<h2>Cpf: {{user.aluno.cpf}} </h2>
+	<h2>Curso: {{user.aluno.curso}} </h2>
+	<h2>Ranking: {{user.aluno.ranking}} </h2>
+	<h4>se desejar sair: <a href="{% url 'logout' %}">Clique aqui</a> </h4>
+
+{% endblock content %}

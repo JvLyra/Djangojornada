@@ -1,0 +1,16 @@
+{% extends "core/base.html" %}
+
+
+{% block content %}
+	{% for aluno in object_list %}
+		<h4> <a href="{% url 'aluno-detail' pk=aluno.id %}">{{aluno.nome}}</a> </h4>
+		<ul>
+			<li>{{aluno.cpf}}</li>
+			<li>{{aluno.curso}}</li>
+			<li>{{aluno.data_de_nascimento}}</li>
+			<li>{{aluno.ranking}}</li>
+			<li>{{aluno.user.email}}</li>
+		</ul>
+	{% endfor %}
+	
+{% endblock content %}
